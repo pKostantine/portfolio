@@ -38,7 +38,7 @@ export default function Home() {
                        Email
                      </a>
                   </Button>
-                  <Button asChild variant_outline" size="lg">
+                  <Button asChild variant="outline" size="lg">
                      <a href={PORTFOLIO_DATA.contact.linkedin} target="_blank" rel="noopener noreferrer">
                        <Linkedin className="mr-2 h-5 w-5" />
                        LinkedIn
