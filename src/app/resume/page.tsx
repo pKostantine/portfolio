@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ArrowLeft, Download } from 'lucide-react';
 
 export default function ResumePage() {
-  const resumePdfUrl = '/Pierre%20Kostantine%20Resume%20November%202025.pdf';
+  const resumePdfUrl = '/Pierre Kostantine_Resume_November_2025.pdf';
 
   return (
     <div className="flex flex-col h-screen bg-muted">
@@ -19,7 +19,7 @@ export default function ResumePage() {
           {PORTFOLIO_DATA.name}'s Resume
         </h1>
         <Button asChild>
-          <a href={resumePdfUrl} download="Pierre Kostantine Resume November 2025.pdf">
+          <a href={resumePdfUrl} download="Pierre Kostantine_Resume_November_2025.pdf">
             <Download className="mr-2 h-4 w-4" />
             Download
           </a>
@@ -35,8 +35,8 @@ export default function ResumePage() {
             className="border-none"
           >
             <div className="p-4 text-center text-muted-foreground">
-              <p>Your browser does not support viewing PDFs directly. </p>
-              <a href={resumePdfUrl} download="Pierre Kostantine Resume November 2025.pdf" className="text-primary underline">
+              <p>It looks like your browser doesn't support viewing PDFs directly.</p>
+              <a href={resumePdfUrl} download="Pierre Kostantine_Resume_November_2025.pdf" className="text-primary underline">
                 Click here to download the resume instead.
               </a>
             </div>
