@@ -5,7 +5,7 @@ import { Separator } from '@/components/ui/separator';
 import { PORTFOLIO_DATA } from '@/lib/data';
 import ProjectCard from '@/components/project-card';
 import AiSuggestionForm from '@/components/ai-suggestion-form';
-import profilePic from '@/lib/Bero.png';
+import profilePic from '@/lib/Pierre Kostantine PFP.png';
 
 export default function Home() {
 
