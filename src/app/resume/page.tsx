@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ArrowLeft, Download } from 'lucide-react';
 
 export default function ResumePage() {
-  const resumePdfUrl = '/pierre-resume-placeholder.pdf';
+  const resumePdfUrl = '/Pierre Kostantine Resume November 2025.pdf';
 
   return (
     <div className="flex flex-col h-screen bg-muted">
