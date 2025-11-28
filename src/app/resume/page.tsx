@@ -34,10 +34,12 @@ export default function ResumePage() {
             height="100%"
             className="border-none"
           >
-            <p className="p-4 text-center text-muted-foreground">
-              It appears you don't have a PDF plugin for this browser.
-              You can <a href={resumePdfUrl} download className="text-primary underline">click here to download the PDF file.</a>
-            </p>
+            <div className="p-4 text-center text-muted-foreground">
+              <p>Your browser does not support viewing PDFs directly. </p>
+              <a href={resumePdfUrl} download className="text-primary underline">
+                Click here to download the resume instead.
+              </a>
+            </div>
           </object>
         </div>
       </main>
