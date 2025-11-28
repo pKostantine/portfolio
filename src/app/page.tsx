@@ -48,7 +48,7 @@ export default function Home() {
               </div>
               <div className="flex justify-center">
                 <Image
-                  src={PORTFOLIO_DATA.profilePictureUrl}
+                  src="/Pierre Kostantine PFP.png"
                   alt={`Portrait of ${PORTFOLIO_DATA.name}`}
                   data-ai-hint="man portrait"
                   width={350}
