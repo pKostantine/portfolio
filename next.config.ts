@@ -30,6 +30,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  webpack: (config) => {
+    config.externals.push('canvas');
+    return config;
+  },
 };
 
 export default nextConfig;
