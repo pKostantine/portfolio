@@ -16,7 +16,7 @@ const PdfViewerClient = dynamic(() => import('@/components/pdf-viewer-client'), 
 });
 
 export default function ResumePage() {
-  const pdfFile = "/Pierre_Kostantine_Resume_November_2025.pdf";
+  const pdfFile = "/resume/Pierre_Kostantine_Resume_November_2025.pdf";
 
   return (
     <div className="flex flex-col h-screen bg-muted">
