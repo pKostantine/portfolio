@@ -31,11 +31,11 @@ export const PORTFOLIO_DATA: {
   title: 'Electrical Engineering Student',
   university: 'Toronto Metropolitan University',
   contact: {
-    email: 'pierre.engineer@tmu.ca',
-    linkedin: 'https://linkedin.com/in/pierre-engineer',
+    email: 'pierrek3419@gmail.com',
+    linkedin: 'https://linkedin.com/in/pierre-kostantine',
   },
-  resumeUrl: '/pierre-resume-placeholder.pdf',
-  about: "I am a dedicated and curious second-year Electrical Engineering student at Toronto Metropolitan University with a passion for computer architecture and robotics. I thrive on solving complex problems and turning theoretical concepts into tangible, working projects.",
+  resumeUrl: '/resume',
+  about: "I am a dedicated and curious second-year student at Toronto Metropolitan University with a passion for electrical engineering. I thrive working alone within a team, solving complex problems and troubleshooting, while working on a project among a group of capable engineers. I love being able to turn theoretical concepts into fully functional and useful projects.",
   skills: [
     'VHDL',
     'SystemVerilog',

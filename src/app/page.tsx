@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Download, Linkedin, Mail, Lightbulb } from 'lucide-react';
+import { Eye, Linkedin, Mail, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { PORTFOLIO_DATA } from '@/lib/data';
@@ -27,9 +27,9 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Button asChild size="lg">
-                    <a href={PORTFOLIO_DATA.resumeUrl} download>
-                      <Download className="mr-2 h-5 w-5" />
-                      Download Resume
+                    <a href={PORTFOLIO_DATA.resumeUrl}>
+                      <Eye className="mr-2 h-5 w-5" />
+                      View Resume
                     </a>
                   </Button>
                   <div className="flex gap-2">
