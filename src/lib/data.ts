@@ -25,6 +25,7 @@ export const PORTFOLIO_DATA: {
   skills: string[];
   interests: string[];
   projects: Project[];
+  resumeUrl: string;
 } = {
   name: 'Pierre Kostantine',
   title: 'Electrical Engineering Student',
@@ -67,4 +68,5 @@ export const PORTFOLIO_DATA: {
       icon: 'Car',
     },
   ],
+  resumeUrl: '/resume',
 };
