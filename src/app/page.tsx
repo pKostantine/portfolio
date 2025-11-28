@@ -1,12 +1,11 @@
 import Image from 'next/image';
-import { Linkedin, Mail, Lightbulb, FileText } from 'lucide-react';
+import { Linkedin, Mail, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { PORTFOLIO_DATA } from '@/lib/data';
 import ProjectCard from '@/components/project-card';
 import AiSuggestionForm from '@/components/ai-suggestion-form';
-import profilePic from '@/lib/Pierre Kostantine PFP.png';
-import Link from 'next/link';
+import { Lightbulb } from 'lucide-react';
 
 export default function Home() {
 
@@ -27,19 +26,19 @@ export default function Home() {
                   {PORTFOLIO_DATA.about}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button asChild variant="default" size="lg" className="h-full">
-                     <a href={PORTFOLIO_DATA.resumeUrl} target="_blank" rel="noopener noreferrer">
+                  <Button asChild variant="default" size="lg">
+                     <a href={PORTFOLIO_DATA.resumeUrl}>
                        <FileText className="mr-2 h-5 w-5" />
                        View Resume
                      </a>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="h-full">
+                  <Button asChild variant="outline" size="lg">
                      <a href={`mailto:${PORTFOLIO_DATA.contact.email}`}>
                        <Mail className="mr-2 h-5 w-5" />
                        Email
                      </a>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="h-full">
+                  <Button asChild variant="outline" size="lg">
                      <a href={PORTFOLIO_DATA.contact.linkedin} target="_blank" rel="noopener noreferrer">
                        <Linkedin className="mr-2 h-5 w-5" />
                        LinkedIn
@@ -49,7 +48,7 @@ export default function Home() {
               </div>
               <div className="flex justify-center">
                 <Image
-                  src={profilePic}
+                  src={PORTFOLIO_DATA.profilePictureUrl}
                   alt={`Portrait of ${PORTFOLIO_DATA.name}`}
                   data-ai-hint="man portrait"
                   width={350}
