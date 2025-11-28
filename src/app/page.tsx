@@ -56,7 +56,7 @@ export default function Home() {
                   width={350}
                   height={350}
                   priority
-                  className="rounded-full aspect-square object-cover border-8 border-primary/10 shadow-lg"
+                  className="rounded-full aspect-square object-cover object-[center_20%] border-8 border-primary/10 shadow-lg"
                 />
               </div>
             </div>
