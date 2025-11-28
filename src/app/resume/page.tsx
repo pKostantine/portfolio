@@ -1,6 +1,5 @@
 'use client';
 
-import PdfViewer from '@/components/pdf-viewer';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 import Link from 'next/link';
@@ -20,7 +19,11 @@ export default function ResumePage() {
         </Button>
       </header>
       <main className="flex-1 overflow-auto">
-        <PdfViewer />
+        <iframe
+          src={pdfFile}
+          className="w-full h-full"
+          title="Pierre Kostantine's Resume"
+        />
       </main>
     </div>
   );
