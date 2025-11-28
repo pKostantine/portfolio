@@ -27,10 +27,10 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Button asChild variant="default" size="lg">
-                     <a href={PORTFOLIO_DATA.resumeUrl}>
-                       <FileText className="mr-2 h-5 w-5" />
-                       View Resume
-                     </a>
+                    <a href={PORTFOLIO_DATA.resumeUrl}>
+                      <FileText className="mr-2 h-5 w-5" />
+                      View Resume
+                    </a>
                   </Button>
                   <Button asChild variant="outline" size="lg">
                      <a href={`mailto:${PORTFOLIO_DATA.contact.email}`}>
