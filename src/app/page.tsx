@@ -3,12 +3,11 @@ import { Download, Linkedin, Mail, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { PORTFOLIO_DATA } from '@/lib/data';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import ProjectCard from '@/components/project-card';
 import AiSuggestionForm from '@/components/ai-suggestion-form';
+import profilePic from '@/lib/Bero.png';
 
 export default function Home() {
-  const profilePic = PlaceHolderImages.find(img => img.id === 'profile-pic');
 
   return (
     <div className="flex flex-col min-h-dvh bg-background">
@@ -50,17 +49,15 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex justify-center">
-                {profilePic && (
-                  <Image
-                    src={profilePic.imageUrl}
-                    alt={`Portrait of ${PORTFOLIO_DATA.name}`}
-                    data-ai-hint={profilePic.imageHint}
-                    width={350}
-                    height={350}
-                    priority
-                    className="rounded-full aspect-square object-cover border-8 border-primary/10 shadow-lg"
-                  />
-                )}
+                <Image
+                  src={profilePic}
+                  alt={`Portrait of ${PORTFOLIO_DATA.name}`}
+                  data-ai-hint="man portrait"
+                  width={350}
+                  height={350}
+                  priority
+                  className="rounded-full aspect-square object-cover border-8 border-primary/10 shadow-lg"
+                />
               </div>
             </div>
           </div>
