@@ -27,7 +27,7 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Button asChild size="lg">
-                    <a href={PORTFOLIO_DATA.resumeUrl}>
+                    <a href={PORTFOLIO_DATA.resumeUrl} target="_blank" rel="noopener noreferrer">
                       <Eye className="mr-2 h-5 w-5" />
                       View Resume
                     </a>
