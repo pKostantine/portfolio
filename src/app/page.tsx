@@ -6,6 +6,7 @@ import { PORTFOLIO_DATA } from '@/lib/data';
 import ProjectCard from '@/components/project-card';
 import AiSuggestionForm from '@/components/ai-suggestion-form';
 import profilePic from '@/lib/Pierre Kostantine PFP.png';
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -27,10 +28,10 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Button asChild size="lg">
-                    <a href={PORTFOLIO_DATA.resumeUrl} target="_blank" rel="noopener noreferrer">
+                    <Link href={PORTFOLIO_DATA.resumeUrl}>
                       <Eye className="mr-2 h-5 w-5" />
                       View Resume
-                    </a>
+                    </Link>
                   </Button>
                   <div className="flex gap-2">
                     <Button asChild variant="outline" size="lg" className="h-full">
