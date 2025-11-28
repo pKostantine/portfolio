@@ -21,7 +21,6 @@ export const PORTFOLIO_DATA: {
     email: string;
     linkedin: string;
   };
-  resumeUrl: string;
   about: string;
   skills: string[];
   interests: string[];
@@ -34,7 +33,6 @@ export const PORTFOLIO_DATA: {
     email: 'pierrek3419@gmail.com',
     linkedin: 'https://linkedin.com/in/pierre-kostantine',
   },
-  resumeUrl: '/resume',
   about: "I am a dedicated and curious second-year student at Toronto Metropolitan University with a passion for electrical engineering. I thrive working alone within a team, solving complex problems and troubleshooting, while working on a project among a group of capable engineers. I love being able to turn theoretical concepts into fully functional and useful projects.",
   skills: [
     'VHDL',

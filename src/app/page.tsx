@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Eye, Linkedin, Mail, Lightbulb } from 'lucide-react';
+import { Linkedin, Mail, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { PORTFOLIO_DATA } from '@/lib/data';
@@ -27,14 +27,8 @@ export default function Home() {
                   {PORTFOLIO_DATA.about}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button asChild size="lg">
-                    <Link href={PORTFOLIO_DATA.resumeUrl}>
-                      <Eye className="mr-2 h-5 w-5" />
-                      View Resume
-                    </Link>
-                  </Button>
                   <div className="flex gap-2">
-                    <Button asChild variant="outline" size="lg" className="h-full">
+                    <Button asChild variant="default" size="lg" className="h-full">
                        <a href={`mailto:${PORTFOLIO_DATA.contact.email}`}>
                          <Mail className="mr-2 h-5 w-5" />
                          Email
