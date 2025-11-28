@@ -1,12 +1,13 @@
+import PdfViewer from '@/components/pdf-viewer';
 import { PORTFOLIO_DATA } from '@/lib/data';
 
 export default function ResumePage() {
   const resumeFile = '/Pierre_Kostantine_Resume_November_2025.pdf';
 
   return (
-    <main className="flex flex-col items-center h-screen bg-background p-4">
-      <div className="w-full max-w-4xl flex-grow flex flex-col">
-        <div className="flex justify-between items-center mb-4">
+    <main className="flex flex-col items-center min-h-screen bg-gray-50 p-4">
+      <div className="w-full max-w-4xl flex-grow flex flex-col bg-white shadow-lg rounded-lg">
+        <div className="flex justify-between items-center p-4 border-b">
           <h1 className="text-2xl font-headline font-bold text-primary">
             {PORTFOLIO_DATA.name}'s Resume
           </h1>
@@ -18,12 +19,8 @@ export default function ResumePage() {
             Download
           </a>
         </div>
-        <div className="flex-grow border rounded-lg overflow-hidden">
-          <iframe
-            src={resumeFile}
-            className="w-full h-full"
-            title={`${PORTFOLIO_DATA.name}'s Resume`}
-          />
+        <div className="flex-grow overflow-y-auto">
+           <PdfViewer pdfUrl={resumeFile} />
         </div>
       </div>
     </main>
