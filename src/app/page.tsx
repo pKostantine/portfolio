@@ -27,20 +27,18 @@ export default function Home() {
                   {PORTFOLIO_DATA.about}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <div className="flex gap-2">
-                    <Button asChild variant="default" size="lg" className="h-full">
-                       <a href={`mailto:${PORTFOLIO_DATA.contact.email}`}>
-                         <Mail className="mr-2 h-5 w-5" />
-                         Email
-                       </a>
-                    </Button>
-                    <Button asChild variant="outline" size="lg" className="h-full">
-                       <a href={PORTFOLIO_DATA.contact.linkedin} target="_blank" rel="noopener noreferrer">
-                         <Linkedin className="mr-2 h-5 w-5" />
-                         LinkedIn
-                       </a>
-                    </Button>
-                  </div>
+                  <Button asChild variant="default" size="lg" className="h-full">
+                     <a href={`mailto:${PORTFOLIO_DATA.contact.email}`}>
+                       <Mail className="mr-2 h-5 w-5" />
+                       Email
+                     </a>
+                  </Button>
+                  <Button asChild variant="outline" size="lg" className="h-full">
+                     <a href={PORTFOLIO_DATA.contact.linkedin} target="_blank" rel="noopener noreferrer">
+                       <Linkedin className="mr-2 h-5 w-5" />
+                       LinkedIn
+                     </a>
+                  </Button>
                 </div>
               </div>
               <div className="flex justify-center">
