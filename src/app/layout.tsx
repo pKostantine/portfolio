@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: "Pierre's Electrical Engineering Portfolio",
+  title: "Pierre Kostantine's Electrical Engineering Portfolio",
   description: "Portfolio for Pierre, a 2nd year Electrical Engineering student at Toronto Metropolitan University.",
 };
 

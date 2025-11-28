@@ -27,7 +27,7 @@ export const PORTFOLIO_DATA: {
   interests: string[];
   projects: Project[];
 } = {
-  name: 'Pierre',
+  name: 'Pierre Kostantine',
   title: 'Electrical Engineering Student',
   university: 'Toronto Metropolitan University',
   contact: {

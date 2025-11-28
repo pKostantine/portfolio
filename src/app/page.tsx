@@ -53,7 +53,7 @@ export default function Home() {
                 {profilePic && (
                   <Image
                     src={profilePic.imageUrl}
-                    alt="Portrait of Pierre"
+                    alt={`Portrait of ${PORTFOLIO_DATA.name}`}
                     data-ai-hint={profilePic.imageHint}
                     width={350}
                     height={350}
