@@ -1,8 +1,19 @@
-import PdfViewer from "@/components/pdf-viewer";
+"use client";
+
+import dynamic from 'next/dynamic';
 import { Button } from "@/components/ui/button";
-import { PORTFOLIO_DATA } from "@/lib/data";
-import { Download, Home } from "lucide-react";
+import { Download, Home, Loader2 } from "lucide-react";
 import Link from "next/link";
+
+const PdfViewerClient = dynamic(() => import('@/components/pdf-viewer-client'), {
+  ssr: false,
+  loading: () => (
+    <div className="flex justify-center items-center h-full flex-col gap-4">
+      <Loader2 className="h-8 w-8 animate-spin" />
+      <p>Loading PDF...</p>
+    </div>
+  ),
+});
 
 export default function ResumePage() {
   const pdfFile = "/Pierre_Kostantine_Resume_November_2025.pdf";
@@ -27,7 +38,7 @@ export default function ResumePage() {
         </div>
       </header>
       <main className="flex-1 overflow-auto">
-        <PdfViewer url={pdfFile} />
+        <PdfViewerClient url={pdfFile} />
       </main>
     </div>
   )
