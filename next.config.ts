@@ -3,13 +3,6 @@ import type {NextConfig} from 'next';
 const nextConfig: NextConfig = {
   /* config options here */
   output: "standalone",
-  webpack: (config, options) => {
-    config.module.rules.push({
-      test: /\.(pdf)$/,
-      type: "asset/resource",
-    });
-    return config;
-  },
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -31,7 +24,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: 'https;
         hostname: 'picsum.photos',
         port: '',
         pathname: '/**',
