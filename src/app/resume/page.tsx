@@ -1,11 +1,37 @@
 'use client';
+import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Home, Download, FileText } from 'lucide-react';
+import { Home, Download, FileText, Loader2 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import resumeUrl from '@/assets/Pierre_Kostantine_Resume_November_2025.pdf';
+import { getResumeDataUri } from '@/app/actions';
+import { useToast } from '@/hooks/use-toast';
 
 export default function ResumePage() {
+  const [loading, setLoading] = useState(false);
+  const { toast } = useToast();
+
+  const handleDownload = async () => {
+    setLoading(true);
+    const response = await getResumeDataUri();
+    setLoading(false);
+
+    if (response.success && response.data) {
+      const link = document.createElement('a');
+      link.href = response.data;
+      link.download = 'Pierre_Kostantine_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      toast({
+        variant: 'destructive',
+        title: 'Error',
+        description: response.error || 'Could not download resume.',
+      });
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-dvh bg-background text-foreground">
       <header className="flex items-center justify-between p-4 border-b bg-card flex-shrink-0">
@@ -29,14 +55,21 @@ export default function ResumePage() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Button asChild size="lg" className="w-full">
-              <a href={resumeUrl} download="Pierre_Kostantine_Resume.pdf">
-                <Download className="mr-2 h-5 w-5" />
-                Download Resume
-              </a>
+            <Button size="lg" className="w-full" onClick={handleDownload} disabled={loading}>
+              {loading ? (
+                <>
+                  <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                  Preparing...
+                </>
+              ) : (
+                <>
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Resume
+                </>
+              )}
             </Button>
             <p className="text-xs text-muted-foreground mt-4">
-              The document will open in a new tab if your browser supports it, otherwise it will be downloaded.
+              Your resume will be downloaded directly to your device.
             </p>
           </CardContent>
         </Card>
