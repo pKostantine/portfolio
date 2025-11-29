@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Home, Download } from 'lucide-react';
 
-const pdfUrl = '/Pierre_Kostantine_Resume_November_2025.pdf';
+const pdfUrl = '/resume/Pierre_Kostantine_Resume_November_2025.pdf';
 
 export default function ResumePage() {
   return (
