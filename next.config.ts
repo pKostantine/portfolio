@@ -33,7 +33,14 @@ const nextConfig: NextConfig = {
   turbopack: {
     rules: {
       '**/*.pdf': {
-        loaders: ['file-loader'],
+        loaders: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'static/media/[name].[hash].[ext]',
+            },
+          },
+        ],
       },
     },
   },
