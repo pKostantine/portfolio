@@ -2,8 +2,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Home, Download } from 'lucide-react';
-
-const pdfUrl = '/resume/Pierre_Kostantine_Resume_November_2025.pdf';
+import pdfUrl from '@/assets/Pierre_Kostantine_Resume_November_2025.pdf';
 
 export default function ResumePage() {
   return (
@@ -18,7 +17,7 @@ export default function ResumePage() {
             </Link>
           </Button>
           <Button asChild variant="default">
-            <a href={pdfUrl} download>
+            <a href={pdfUrl} download="Pierre_Kostantine_Resume.pdf">
               <Download className="mr-2 h-4 w-4" />
               Download
             </a>
