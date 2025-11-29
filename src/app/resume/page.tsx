@@ -2,9 +2,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Home, Download } from 'lucide-react';
-
-// The PDF is now in the `public` folder, so we can use a static path.
-const pdfUrl = '/resume/Pierre_Kostantine_Resume_November_2025.pdf';
+import pdfUrl from '@/assets/Pierre_Kostantine_Resume_November_2025.pdf';
 
 export default function ResumePage() {
   return (
