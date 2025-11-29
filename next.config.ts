@@ -34,6 +34,13 @@ const nextConfig: NextConfig = {
     config.externals.push('canvas');
     return config;
   },
+  experimental: {
+    turbopack: {
+      resolveAlias: {
+        canvas: 'false',
+      },
+    },
+  },
 };
 
 export default nextConfig;
