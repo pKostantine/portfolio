@@ -1,20 +1,14 @@
 'use client';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Home, Download } from 'lucide-react';
-import { Suspense } from 'react';
-
-const PdfViewerClient = dynamic(() => import('@/components/pdf-viewer-client'), {
-  ssr: false,
-});
 
 const pdfUrl = '/Pierre_Kostantine_Resume_November_2025.pdf';
 
 export default function ResumePage() {
   return (
     <div className="flex flex-col h-screen bg-background text-foreground">
-      <header className="flex items-center justify-between p-4 border-b bg-card">
+      <header className="flex items-center justify-between p-4 border-b bg-card flex-shrink-0">
         <h1 className="text-xl font-headline">My Resume</h1>
         <div className="flex gap-2">
           <Button asChild variant="outline">
@@ -31,10 +25,13 @@ export default function ResumePage() {
           </Button>
         </div>
       </header>
-      <main className="flex-1 overflow-auto">
-        <Suspense fallback={<div className="flex justify-center items-center h-full">Loading PDF...</div>}>
-          <PdfViewerClient url={pdfUrl} />
-        </Suspense>
+      <main className="flex-1 overflow-hidden">
+        <iframe
+          src={pdfUrl}
+          className="w-full h-full"
+          title="Pierre Kostantine's Resume"
+          aria-label="PDF viewer for Pierre Kostantine's Resume"
+        />
       </main>
     </div>
   );
