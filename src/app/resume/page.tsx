@@ -3,10 +3,9 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Home, Download, FileText } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import resumeUrl from '@/assets/Pierre_Kostantine_Resume_November_2025.pdf';
 
 export default function ResumePage() {
-  const resumeUrl = '/Pierre_Kostantine_Resume_November_2025.pdf';
-
   return (
     <div className="flex flex-col min-h-dvh bg-background text-foreground">
       <header className="flex items-center justify-between p-4 border-b bg-card flex-shrink-0">
@@ -37,7 +36,7 @@ export default function ResumePage() {
               </a>
             </Button>
             <p className="text-xs text-muted-foreground mt-4">
-              If the download does not start, you can right-click the button and select "Save Link As...".
+              The document will open in a new tab if your browser supports it, otherwise it will be downloaded.
             </p>
           </CardContent>
         </Card>

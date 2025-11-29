@@ -2,7 +2,7 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
-  output: "standalone",
+  output: 'standalone',
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -30,6 +30,17 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+  },
+  webpack: (config, { isServer }) => {
+    config.module.rules.push({
+      test: /\.pdf$/,
+      type: 'asset/resource',
+      generator: {
+        filename: 'static/[hash][ext]',
+      },
+    });
+
+    return config;
   },
 };
 
