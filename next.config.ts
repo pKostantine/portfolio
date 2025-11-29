@@ -30,6 +30,14 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  turbopack: {
+    rules: {
+      "**/*.pdf": {
+        loaders: ["raw-loader"],
+        as: "'url'",
+      },
+    },
+  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.pdf$/,
