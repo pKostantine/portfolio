@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Linkedin, Mail, FileText } from 'lucide-react';
+import { Linkedin, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { PORTFOLIO_DATA } from '@/lib/data';
@@ -33,12 +33,6 @@ export default function Home() {
                      </a>
                   </Button>
                   <Button asChild variant="outline" size="lg">
-                     <a href={`mailto:${PORTFOLIO_DATA.contact.email}`}>
-                       <Mail className="mr-2 h-5 w-5" />
-                       Email
-                     </a>
-                  </Button>
-                  <Button asChild variant="outline" size="lg">
                      <a href={PORTFOLIO_DATA.contact.linkedin} target="_blank" rel="noopener noreferrer">
                        <Linkedin className="mr-2 h-5 w-5" />
                        LinkedIn
@@ -60,6 +54,29 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section id="contact" className="w-full py-8 md:py-12">
+          <div className="container px-4 md:px-6 mx-auto">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-1">
+                <h2 className="text-2xl font-headline font-bold tracking-tighter sm:text-3xl text-primary">Contact Me</h2>
+                <p className="max-w-[600px] text-muted-foreground text-sm sm:text-base">
+                  I'm always open to new opportunities and collaborations.
+                </p>
+              </div>
+              <div className="pt-2 text-sm sm:text-base flex flex-col sm:flex-row gap-x-6 gap-y-2">
+                  <p>
+                    <strong>Email:</strong> <a href="mailto:pierrek3419@gmail.com" className="underline hover:text-primary">pierrek3419@gmail.com</a>
+                  </p>
+                  <p>
+                    <strong>Phone:</strong> (647) 504-3982
+                  </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <Separator className="my-12 md:my-24 max-w-4xl mx-auto" />
 
         <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
@@ -104,9 +121,6 @@ export default function Home() {
         </section>
 
       </main>
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <p className="text-muted-foreground text-sm">&copy; {new Date().getFullYear()} {PORTFOLIO_DATA.name}. All rights reserved.</p>
-      </footer>
     </div>
   );
 }
