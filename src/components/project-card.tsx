@@ -6,6 +6,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from '@/components/ui/badge';
 import type { ImagePlaceholder } from '@/lib/placeholder-images';
 import { Cpu, Car, type LucideIcon } from 'lucide-react';
+import Link from 'next/link';
+import ImageCarousel from './image-carousel';
 
 const icons: { [key: string]: LucideIcon } = {
   Cpu,
@@ -18,6 +20,9 @@ interface Project {
   tags: string[];
   image?: ImagePlaceholder;
   icon: string;
+  link?: string;
+  useCarousel?: boolean;
+  carouselImages?: string[];
 }
 
 interface ProjectCardProps {
@@ -27,9 +32,13 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
   const Icon = icons[project.icon];
 
-  return (
-    <Card className="w-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col group">
-      {project.image && (
+  const card = (
+    <Card className="w-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col group h-full">
+      {project.useCarousel && project.carouselImages ? (
+        <CardContent className="p-0">
+            <ImageCarousel images={project.carouselImages} />
+        </CardContent>
+      ) : project.image && (
         <CardContent className="p-0">
           <div className="aspect-video relative overflow-hidden">
             <Image
@@ -62,4 +71,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </CardFooter>
     </Card>
   );
+
+  if (project.link) {
+    return <Link href={project.link} className="flex">{card}</Link>
+  }
+
+  return card;
 }

@@ -11,6 +11,9 @@ interface Project {
   tags: string[];
   image?: ImagePlaceholder;
   icon: string;
+  link?: string;
+  useCarousel?: boolean;
+  carouselImages?: string[];
 }
 
 export const PORTFOLIO_DATA: {
@@ -55,18 +58,29 @@ export const PORTFOLIO_DATA: {
     {
       title: 'Simple General-Purpose Processor',
       description:
-        'Designed and implemented a 16-bit general-purpose processor from the ground up using VHDL. This project involved creating a custom instruction set architecture (ISA), implementing a 5-stage pipeline, and handling data hazards. The processor was simulated extensively and verified for functionality on an Artix-7 FPGA.',
+        'I developed a complete processor in VHDL and built it on the Altera Cyclone II DE2 FPGA, showing a complete digital system implementation from architecture to hardware. The processor has storage components, a microcode-controlled control unit, and an 8-bit Arithmetic Logic Unit supporting arithmetic, Booleans, bitwise manipulations, comparisons, as well as user-defined operations. The processor further includes a Mealy finite state machine and a 4-to-16 decoder, handling operation selection, as well as input storage via gated D latches. I used Quartus II waveform simulations, and real-time verification on the FPGA, with the resulting outputs displayed on a seven-segment display through a decoder. This project shows my ability to design and implement a functional digital system while also demonstrating how such a processor can be applied to everyday applications, such as basic computing or calculator style operations. At the same time, it serves as a strong foundation for further exploration and more advanced development in FPGA based processor and digital system design.',
       tags: ['VHDL', 'FPGA', 'Computer Architecture', 'Digital Logic'],
-      image: processorImage,
       icon: 'Cpu',
+      link: '/processor-project',
+      useCarousel: true,
+      carouselImages: [
+        '/imgs/ALU1WVF.png',
+        '/imgs/GPU.png',
+        '/imgs/P1.3.jpeg',
+        '/imgs/P1.png',
+        '/imgs/P2.6.jpeg',
+        '/imgs/P3.3.jpeg',
+      ],
     },
     {
       title: 'Self-Driving Toy Car',
       description:
-        'Built and programmed a miniature autonomous vehicle using a Raspberry Pi and Robot Operating System (ROS). The car uses a camera for lane detection and various sensors for obstacle avoidance. This project provided hands-on experience with sensor integration, control algorithms, and software development in a robotics context.',
-      tags: ['Python', 'ROS', 'Raspberry Pi', 'Robotics', 'C++'],
-      image: carImage,
+        'I designed and built a line following self driving toy car using C Language on an Arduino Mini, demonstrating a complete embedded systems project from control logic to physical hardware behavior. The system uses two analog sensors to detect a black line on a contrasting surface and dynamically control two DC motors to maintain accurate path tracking through forward motion and tank turn corrections. Threshold based decision logic determines directional adjustments, while additional control features handle real world track conditions, including ignoring the start marker, stopping at intersections, and executing a 180 degree turn after completing one full lap. This project shows my ability to translate sensor data into real time motor control, integrate software with hardware components, and design reliable autonomous behavior, while also serving as a strong foundation for more advanced robotics and embedded systems development.',
+      tags: ['C', 'Arduino', 'Embedded Systems', 'Robotics'],
       icon: 'Car',
+      link: '/car-project',
+      useCarousel: true,
+      carouselImages: ['/imgs/Car 1.jpeg', '/imgs/Car 2.jpeg'],
     },
   ],
 };
