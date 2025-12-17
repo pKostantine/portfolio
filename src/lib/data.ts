@@ -80,7 +80,11 @@ export const PORTFOLIO_DATA: {
       icon: 'Car',
       link: '/car-project',
       useCarousel: true,
-      carouselImages: ['/imgs/Car 1.jpeg', '/imgs/Car 2.jpeg'],
+      carouselImages: [
+        '/imgs/Car1.jpeg', 
+        '/imgs/Car2.jpeg',
+        '/imgs/Car3.jpeg'
+      ],
     },
   ],
 };
