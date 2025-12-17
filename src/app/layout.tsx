@@ -5,6 +5,9 @@ import { Toaster } from "@/components/ui/toaster";
 export const metadata: Metadata = {
   title: "Pierre Kostantine's Portfolio",
   description: "Portfolio for Pierre, a 2nd year Electrical Engineering student at Toronto Metropolitan University.",
+  icons: {
+    icon: '/imgs/icon.png',
+  },
 };
 
 export default function RootLayout({
