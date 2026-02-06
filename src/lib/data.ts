@@ -59,8 +59,8 @@ export const PORTFOLIO_DATA: {
       title: 'Revit Electrical Design for First Floor of Building',
       description:
         'I developed a complete first floor electrical design using Autodesk Revit 2026, creating coordinated power and lighting layouts based on an architectural model. The project involved placing and modifying lighting fixtures, receptacles, electrical panels, circuits, conduits, and cable trays while maintaining proper coordination with linked Revit and AutoCAD files. Electrical systems were organized through accurate circuit assignments and panel connections to reflect realistic power distribution.\n\nIn addition to the layout, I generated detailed lighting and electrical schedules directly from the model, including lighting panel schedules, power panel schedules, and a lighting fixture schedule. These schedules were organized into a dedicated schedules sheet, alongside a separate first floor power sheet that clearly presents the electrical layout. This project demonstrates my ability to use Revit 2026 for electrical modeling, coordination, scheduling, and professional drawing production, while applying industry relevant workflows suitable for real world electrical design and certification preparation.',
-      tags: ['Revit', 'Electrical Design', 'BIM', 'CAD'],
-      icon: 'Lightbulb',
+      tags: ['Revit 2026', 'Electrical Design'],
+      icon: 'Building',
       link: '/revit-project',
       useCarousel: true,
       carouselImages: [

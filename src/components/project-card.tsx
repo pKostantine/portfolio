@@ -5,13 +5,15 @@ import type { ElementType } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import type { ImagePlaceholder } from '@/lib/placeholder-images';
-import { Cpu, Car, type LucideIcon } from 'lucide-react';
+import { Cpu, Car, Building, Lightbulb, type LucideIcon } from 'lucide-react';
 import Link from 'next/link';
 import ImageCarousel from './image-carousel';
 
 const icons: { [key: string]: LucideIcon } = {
   Cpu,
   Car,
+  Building,
+  Lightbulb,
 };
 
 interface Project {
