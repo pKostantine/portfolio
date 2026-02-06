@@ -69,6 +69,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* <Separator className="my-6 md:my-12 max-w-4xl mx-auto" /> */}
        
         <section id="certifications" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
@@ -82,6 +84,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <Separator className="my-6 md:my-12 max-w-4xl mx-auto" />
 
         <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
@@ -101,6 +105,7 @@ export default function Home() {
           </div>
         </section>
 
+        <Separator className="my-6 md:my-12 max-w-4xl mx-auto" />
 
         <section id="contact" className="w-full py-8 md:py-12">
           <div className="container px-4 md:px-6 mx-auto">
@@ -123,9 +128,7 @@ export default function Home() {
           </div>
         </section>
 
-
-        <Separator className="my-12 md:my-24 max-w-4xl mx-auto" />
-
+        <Separator className="my-6 md:my-12 max-w-4xl mx-auto" />
 
       </main>
     </div>
