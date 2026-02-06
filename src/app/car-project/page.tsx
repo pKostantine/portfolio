@@ -15,7 +15,7 @@ export default function CarProjectPage() {
   return (
     <div className="flex flex-col min-h-dvh bg-background text-foreground">
       <header className="flex items-center justify-between p-4 border-b bg-card flex-shrink-0">
-        <h1 className="text-xl font-headline">Self-Driving Car Project Report</h1>
+        <h1 className="text-xl font-headline">Design of a Line-Following Self-Driving Car Report</h1>
         <Button asChild variant="outline">
           <Link href="/">
             <Home className="mr-2 h-4 w-4" />
