@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { PORTFOLIO_DATA } from '@/lib/data';
 import ProjectCard from '@/components/project-card';
+import CertificationCard from '@/components/certification-card';
 import { Lightbulb } from 'lucide-react';
 
 
@@ -69,6 +70,19 @@ export default function Home() {
           </div>
         </section>
        
+        <section id="certifications" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6 mx-auto">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl text-primary">My Certifications</h2>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-stretch gap-8 sm:grid-cols-1 md:gap-12 lg:grid-cols-2 mt-12">
+              <CertificationCard src="/imgs/CertificateRevitElectrical.png" alt="Revit Electrical Certificate" />
+            </div>
+          </div>
+        </section>
+
         <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
