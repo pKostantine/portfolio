@@ -38,7 +38,7 @@ export const PORTFOLIO_DATA: {
     linkedin: 'https://linkedin.com/in/pierre-kostantine',
     resumeUrl: '/resume',
   },
-  about: "I am a dedicated and curious second-year student at Toronto Metropolitan University with a passion for electrical engineering. I thrive working alone within a team, solving complex problems and troubleshooting, while working on projects among groups of capable engineers. I love being able to turn theoretical concepts into fully functional and useful projects.",
+  about: "I am a dedicated and curious second-year student at Toronto Metropolitan University with a passion for electrical engineering. I thrive working independently within a team, solving complex problems and troubleshooting, while working on projects among groups of capable engineers. I love being able to turn theoretical concepts into fully functional and useful projects and designs.",
   skills: [
     'VHDL',
     'SystemVerilog',
