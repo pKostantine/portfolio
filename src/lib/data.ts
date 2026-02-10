@@ -88,9 +88,9 @@ export const PORTFOLIO_DATA: {
       ],
     },
     {
-      title: 'Self-Driving Toy Car',
+      title: 'Line-Following Self-Driving Car',
       description:
-        'I designed and built a line following self driving toy car using C Language on an Arduino Mini, demonstrating a complete embedded systems project from control logic to physical hardware behavior. The system uses two analog sensors to detect a black line on a contrasting surface and dynamically control two DC motors to maintain accurate path tracking through forward motion and tank turn corrections. Threshold based decision logic determines directional adjustments, while additional control features handle real world track conditions, including ignoring the start marker, stopping at intersections, and a 180 degree turn after completing one full lap. This project shows my ability to translate sensor data into real time motor control, integrate software with hardware components, and design reliable autonomous behavior, while also serving as a strong foundation for more advanced robotics and embedded systems development.',
+        'I designed and built a line following autonomos car model using Hardware C Language on an Arduino Mini, demonstrating a complete embedded systems project from control logic to physical hardware behavior. The system uses two analog sensors to detect a black line on a contrasting surface and dynamically control two DC motors to maintain accurate path tracking through forward motion and tank turn corrections. Threshold based decision logic determines directional adjustments, while additional control features handle real world track conditions, including ignoring the start marker, stopping at intersections, and a 180 degree turn after completing one full lap. This project shows my ability to translate sensor data into real time motor control, integrate software with hardware components, and design reliable autonomous behavior, while also serving as a strong foundation for more advanced robotics and embedded systems development.',
       tags: ['C', 'Arduino', 'Embedded Systems', 'Robotics'],
       icon: 'Car',
       link: '/car-project',
