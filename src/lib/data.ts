@@ -71,7 +71,7 @@ export const PORTFOLIO_DATA: {
       ],
     },
     {
-      title: 'Simple General-Purpose Processor',
+      title: 'FPGA Implementation of an 8-Bit Processor',
       description:
         'I developed a complete processor in VHDL and built it on the Altera Cyclone II DE2 FPGA, showing a complete digital system implementation from architecture to hardware. The processor has storage components, a microcode-controlled control unit, and an 8-bit Arithmetic Logic Unit supporting arithmetic, Booleans, bitwise manipulations, comparisons, as well as user-defined operations. The processor further includes a Mealy finite state machine and a 4-to-16 decoder, handling operation selection, as well as input storage via gated D latches. I used Quartus II waveform simulations, and real-time verification on the FPGA, with the resulting outputs displayed on a seven-segment display through a decoder. This project shows my ability to design and implement a functional digital system while also demonstrating how such a processor can be applied to everyday applications, such as basic computing or calculator style operations. At the same time, it serves as a strong foundation for further exploration and more advanced development in FPGA based processor and digital system design.',
       tags: ['VHDL', 'FPGA', 'Computer Architecture', 'Digital Logic'],
