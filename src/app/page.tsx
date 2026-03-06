@@ -76,11 +76,12 @@ export default function Home() {
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl text-primary">My Certifications</h2>
+                <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl text-primary">My Certifications and Achievements</h2>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-stretch gap-8 sm:grid-cols-1 md:gap-12 lg:grid-cols-2 mt-12">
+            <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-1 md:gap-12 lg:grid-cols-2 mt-12">
               <CertificationCard src="/imgs/CertificateRevitElectrical.png" alt="Revit Electrical Certificate" />
+              <CertificationCard src="/imgs/F2025_Deans_List.png" alt="Dean's List Achievement" />
             </div>
           </div>
         </section>

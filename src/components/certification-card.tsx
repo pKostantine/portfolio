@@ -16,8 +16,10 @@ export default function CertificationCard({ src, alt }: CertificationCardProps) 
     <Dialog>
       <DialogTrigger asChild>
         <Card className="cursor-pointer hover:shadow-lg transition-shadow">
-          <CardContent className="p-0">
-            <Image src={src} alt={alt} width={500} height={350} className="rounded-lg" />
+          <CardContent className="p-0 flex justify-center items-center">
+            <div style={{ position: 'relative', width: '100%', height: 'auto' }}>
+              <Image src={src} alt={alt} layout="responsive" width={500} height={350} className="rounded-lg" />
+            </div>
           </CardContent>
         </Card>
       </DialogTrigger>
