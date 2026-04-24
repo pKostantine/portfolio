@@ -88,7 +88,22 @@ export const PORTFOLIO_DATA: {
       ],
     },
     {
-      title: 'Line-Following Self-Driving Car',
+      title: 'Design of a 4 Stage MOSFET Amplifier',
+      description:
+        'I designed and analyzed a four stage MOSFET voltage amplifier to meet specific performance requirements, including gain, bandwidth, power consumption, and output swing. The amplifier uses three cascaded common source stages to achieve high voltage gain, followed by a common drain output stage to buffer the load and reduce output sensitivity. The project included full device level design, with biasing networks, transistor sizing, and verification that every device remained in saturation. I performed hand calculations for operating points, transconductance, gain, and bandwidth, then validated the design with SPICE simulation in KiCad. The final design achieved more than 60 dB of voltage gain, over 30 MHz of bandwidth, greater than 1.5 V peak to peak output swing, and under 1 mW of power consumption, while revealing practical effects such as interstage loading and non ideal large signal behavior.',
+      tags: ['Analog Design', 'MOSFET', 'SPICE', 'KiCad'],
+      icon: 'CircuitBoard',
+      link: '/mosfet-amplifier-project',
+      useCarousel: true,
+      carouselImages: [
+        '/imgs/GainAllStages.png', 
+        '/imgs/DC.png',
+        '/imgs/CS2.png',
+        '/imgs/CD.png',
+      ],
+    },
+    {
+      title: 'Design of an Autonomous Line-Following Car',
       description:
         'I designed and built a line following autonomos car model using Hardware C Language on an Arduino Mini, demonstrating a complete embedded systems project from control logic to physical hardware behavior. The system uses two analog sensors to detect a black line on a contrasting surface and dynamically control two DC motors to maintain accurate path tracking through forward motion and tank turn corrections. Threshold based decision logic determines directional adjustments, while additional control features handle real world track conditions, including ignoring the start marker, stopping at intersections, and a 180 degree turn after completing one full lap. This project shows my ability to translate sensor data into real time motor control, integrate software with hardware components, and design reliable autonomous behavior, while also serving as a strong foundation for more advanced robotics and embedded systems development.',
       tags: ['C', 'Arduino', 'Embedded Systems', 'Robotics'],

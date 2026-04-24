@@ -1,0 +1,150 @@
+'use client';
+
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { CircuitBoard, Gauge, Home, Waves, Zap } from 'lucide-react';
+
+const highlights = [
+  { label: 'Voltage Gain', value: '> 60 dB', icon: Zap },
+  { label: 'Bandwidth', value: '> 30 MHz', icon: Waves },
+  { label: 'Output Swing', value: '> 1.5 Vpp', icon: Gauge },
+  { label: 'Power Consumption', value: '< 1 mW', icon: CircuitBoard },
+];
+
+const designFeatures = [
+  'Three cascaded common source stages to build high voltage gain',
+  'A common drain output stage to buffer the load and reduce output sensitivity',
+  'Biasing network design, transistor sizing, and saturation verification for every device',
+  'Hand analysis for operating points, transconductance, gain, and bandwidth',
+  'SPICE validation in KiCad to compare theory against simulated circuit behavior',
+];
+
+const takeaways = [
+  'Validated first-principles analog design with strong agreement between calculations and simulation',
+  'Observed realistic non-ideal behavior including interstage loading and large-signal limitations',
+  'Met every target except for a minor load sensitivity deviation',
+];
+
+export default function MosfetAmplifierProjectPage() {
+  return (
+    <div className="min-h-dvh bg-background text-foreground">
+      <header className="border-b bg-card">
+        <div className="container mx-auto flex items-center justify-between gap-4 px-4 py-4 md:px-6">
+          <div>
+            <p className="text-sm text-muted-foreground">Project Detail</p>
+            <h1 className="text-xl font-headline md:text-2xl">
+              Design of a 4 Stage MOSFET Amplifier
+            </h1>
+          </div>
+          <Button asChild variant="outline">
+            <Link href="/">
+              <Home className="mr-2 h-4 w-4" />
+              Home
+            </Link>
+          </Button>
+        </div>
+      </header>
+
+      <main className="container mx-auto px-4 py-10 md:px-6 md:py-14">
+        <section className="mx-auto max-w-5xl space-y-8">
+          <div className="space-y-4">
+            <div className="flex flex-wrap gap-2">
+              <Badge variant="secondary">Analog Design</Badge>
+              <Badge variant="secondary">MOSFET</Badge>
+              <Badge variant="secondary">SPICE</Badge>
+              <Badge variant="secondary">KiCad</Badge>
+            </div>
+            <div className="space-y-3">
+              <h2 className="text-3xl font-headline font-bold text-primary md:text-4xl">
+                Multi-stage analog amplifier design from device physics to simulation
+              </h2>
+              <p className="max-w-3xl text-muted-foreground md:text-lg">
+                This project focused on designing a four stage MOSFET voltage amplifier to meet
+                specific performance targets for gain, bandwidth, power, and output swing. The
+                final topology used three common source stages for voltage gain and a common drain
+                output stage for buffering.
+              </p>
+            </div>
+          </div>
+
+          <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            {highlights.map(({ label, value, icon: Icon }) => (
+              <Card key={label}>
+                <CardHeader className="pb-2">
+                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <CardTitle className="text-base">{label}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-2xl font-semibold">{value}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </section>
+
+          <section className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+            <Card>
+              <CardHeader>
+                <CardTitle>Overview</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 text-muted-foreground">
+                <p>
+                  The amplifier was developed at the device level, including transistor sizing,
+                  bias network selection, and operating point design to keep all transistors in
+                  saturation. Hand calculations were used to determine transconductance, stage
+                  gain, and expected bandwidth before moving into simulation.
+                </p>
+                <p>
+                  SPICE simulation in KiCad was then used to validate the design and compare ideal
+                  calculations with practical results. The simulated circuit closely matched theory
+                  while also exposing real-world effects such as interstage loading and non-ideal
+                  large-signal behavior.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Design Highlights</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3 text-muted-foreground">
+                  {designFeatures.map((feature) => (
+                    <li key={feature}>{feature}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </section>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Results and Engineering Takeaways</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 text-muted-foreground">
+              <p>
+                The final amplifier exceeded 60 dB of voltage gain, delivered more than 30 MHz of
+                bandwidth, achieved output swing above 1.5 V peak to peak, and stayed below 1 mW
+                of power consumption. That placed the design within all target specifications
+                except for a small load sensitivity deviation.
+              </p>
+              <ul className="space-y-3">
+                {takeaways.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <p>
+                This work demonstrates a full analog design workflow: starting from first
+                principles, translating theory into a practical multi-stage circuit, and evaluating
+                the tradeoffs that appear in a realistic MOSFET amplifier implementation.
+              </p>
+            </CardContent>
+          </Card>
+        </section>
+      </main>
+    </div>
+  );
+}
