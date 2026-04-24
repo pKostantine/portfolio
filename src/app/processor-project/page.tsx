@@ -22,11 +22,13 @@ export default function ProcessorProjectPage() {
           </Link>
         </Button>
       </header>
-      <main className="flex-1 flex items-center justify-center p-4">
+      <main className="flex-grow flex flex-col">
         {viewerUrl ? (
-          <iframe src={viewerUrl} className="w-full h-full" style={{ minHeight: '80vh' }}/>
+          <iframe src={viewerUrl} className="w-full h-full flex-grow border-0"></iframe>
         ) : (
-          <p>Loading PDF Viewer...</p>
+          <div className="flex items-center justify-center h-full">
+            <p>Loading PDF...</p>
+          </div>
         )}
       </main>
     </div>
