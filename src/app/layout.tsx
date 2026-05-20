@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
+
 export const metadata: Metadata = {
   title: "Pierre Kostantine's Portfolio",
   description: "Portfolio for Pierre, a 2nd year Electrical Engineering student at Toronto Metropolitan University.",
