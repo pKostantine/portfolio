@@ -38,7 +38,7 @@ export const PORTFOLIO_DATA: {
     linkedin: 'https://linkedin.com/in/pierre-kostantine',
     resumeUrl: '/resume',
   },
-  about: "I am a motivated second year Electrical Engineering student at Toronto Metropolitan University with a strong interest in practical, real world design. I work well both independently and within team environments, especially when solving technical problems and troubleshooting systems. I enjoy applying theoretical concepts through labs and projects, and I am particularly interested in turning those concepts into clear, functional engineering designs.",
+  about: "I am a motivated third year Electrical Engineering student at Toronto Metropolitan University with a strong interest in practical, real world design. I work well both independently and within team environments, especially when solving technical problems and troubleshooting systems. I enjoy applying theoretical concepts through labs and projects, and I am particularly interested in turning those concepts into clear, functional engineering designs.",
   skills: [
     'VHDL',
     'SystemVerilog',

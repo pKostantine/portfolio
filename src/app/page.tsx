@@ -127,6 +127,7 @@ export default function Home() {
             <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-1 md:gap-12 lg:grid-cols-2 mt-12">
               <CertificationCard src="/imgs/CertificateRevitElectrical.png" alt="Revit Electrical Certificate" />
               <CertificationCard src="/imgs/F2025_Deans_List.png" alt="Dean's List Achievement" />
+              <CertificationCard src="/imgs/W2026_Deans_List.png" alt="Dean's List Achievement" />
             </div>
           </div>
         </section>
