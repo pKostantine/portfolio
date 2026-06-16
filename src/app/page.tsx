@@ -124,8 +124,14 @@ export default function Home() {
                 <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl text-primary">My Certifications and Achievements</h2>
               </div>
             </div>
+            <div className="mx-auto grid w-full gap-8 justify-items-center items-center sm:grid-cols-1 md:gap-12 lg:grid-cols-1 mt-12">
+              <div className="flex justify-center w-full">
+                <div className="w-full max-w-lg">
+                  <CertificationCard src="/imgs/CertificateRevitElectrical.png" alt="Revit Electrical Certificate" />
+                </div>
+              </div>
+            </div>
             <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-1 md:gap-12 lg:grid-cols-2 mt-12">
-              <CertificationCard src="/imgs/CertificateRevitElectrical.png" alt="Revit Electrical Certificate" />
               <CertificationCard src="/imgs/F2025_Deans_List.png" alt="Dean's List Achievement" />
               <CertificationCard src="/imgs/W2026_Deans_List.png" alt="Dean's List Achievement" />
             </div>
