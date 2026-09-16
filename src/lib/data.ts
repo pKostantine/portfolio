@@ -56,6 +56,21 @@ export const PORTFOLIO_DATA: {
   ],
   projects: [
     {
+      title: 'Fixed-Point MAC Unit for Machine Learning Inference',
+      description:
+        'I designed and optimized a fixed-point multiply-accumulate (MAC) unit for efficient machine-learning inference on resource-constrained hardware. The design focuses on quantized arithmetic for matrix-vector and convolution-style operations, reducing area and power consumption while preserving numerical accuracy for practical deep learning workloads. I analyzed the datapath, control logic, and timing behaviour to minimize critical-path delay and improve throughput, then validated the design through targeted digital simulation and synthesis workflows. This project reflects my interest in AI hardware acceleration, low-power digital design, and the trade-offs between performance, precision, and implementation complexity in embedded and accelerator-based systems.',
+      tags: ['Fixed-Point Arithmetic', 'Machine Learning', 'Digital Design', 'FPGA'],
+      icon: 'Cpu',
+      link: '/fixed-point-mac-unit-project',
+      useCarousel: true,
+      carouselImages: [
+        '/imgs/board.jpg',
+        '/imgs/critical-path.png',
+        '/imgs/dsp-device.png',
+        '/imgs/sequence.jpg',
+      ],
+    },
+    {
       title: 'Revit Electrical Design for First Floor of Building',
       description:
         'I developed a complete first floor electrical design using Autodesk Revit 2026, creating coordinated power and lighting layouts based on an architectural model. The project involved placing and modifying lighting fixtures, receptacles, electrical panels, circuits, conduits, and cable trays while maintaining proper coordination with linked Revit and AutoCAD files. Electrical systems were organized through accurate circuit assignments and panel connections to reflect realistic power distribution.\n\nIn addition to the layout, I generated detailed lighting and electrical schedules directly from the model, including lighting panel schedules, power panel schedules, and a lighting fixture schedule. These schedules were organized into a dedicated schedules sheet, alongside a separate first floor power sheet that clearly presents the electrical layout. This project demonstrates my ability to use Revit 2026 for electrical modeling, coordination, scheduling, and professional drawing production, while applying industry relevant workflows suitable for real world electrical design and certification preparation.',
