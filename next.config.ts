@@ -2,7 +2,9 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
-  output: 'standalone',
+  // Static export: the site has no server routes, so Cloudflare Pages serves
+  // the prerendered HTML in `out/` directly.
+  output: 'export',
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -10,6 +12,8 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+    // No Next.js image optimizer exists in a static export.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
